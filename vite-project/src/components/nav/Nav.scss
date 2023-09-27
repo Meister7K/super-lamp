@@ -4,8 +4,7 @@ nav{
    right: 1em;
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur(2px);
-
+   
 }
 .active{
     color: rgb(153, 73, 73);
@@ -38,11 +37,13 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    
     .nav-name{
         opacity: 0;
         max-width: 0;
         max-height: 0;
         font-weight: bolder;
+        
     }
     .nav-icon{
         opacity: 1;
@@ -65,23 +66,24 @@ nav{
 }
 
 .nav-name{
- transition: all .3s;
+ transition: all .3s ease-in-out ;
  position: absolute;
  z-index: 1;
  display: flex;
 align-self: center;
 justify-self: center;
-    
+color: inherit;
 }
 
 .nav-icon{
-    transition: all .3s;
+    transition: all .3s ease-in-out;
     position: absolute;
     display: flex;
     align-self: center;
     justify-self: center;
     width: 2em;
     height: 2em;
+    color: inherit;
 }
 
 .hamburger{
@@ -91,8 +93,9 @@ justify-self: center;
     height: fit-content;
     background-color: transparent;
     padding: 0;
-    margin: 0;
+    margin: 0.2em;
     z-index: 2;
+    cursor: pointer;
 }
 .ham-icon{
     width: 2em;

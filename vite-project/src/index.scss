@@ -1,3 +1,17 @@
+// Vars
+$MainTextColor: rgba(255,255,255, 0.9);
+
+.theme-dark{
+  $MainTextColor: rgba(255,255,255, 0.9);
+
+}
+
+.theme-light{
+  $MainTextColor: rgba(0,0,0, 0.9);
+}
+
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -12,14 +26,16 @@
   -webkit-text-size-adjust: 100%;
 
 color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: $MainTextColor;
   background-color: #242424;
-
+  background: linear-gradient(217deg, rgba(148, 1, 1, 0.7), rgba(0,0,0,0) 70.71%),
+  linear-gradient(127deg, rgba(184, 89, 1, 0.7), rgba(0,0,0,0) 70.71%),
+  linear-gradient(336deg, rgba(1, 58, 105, 0.7), rgba(0,0,0,0) 70.71%);
 }
 
 a {
   font-weight: 500;
- 
+ color: inherit;
   text-decoration: inherit;
 }
 // a:hover {
@@ -50,9 +66,9 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
-}
+// button:hover {
+//   border-color: #646cff;
+// }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
