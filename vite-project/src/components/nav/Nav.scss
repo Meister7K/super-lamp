@@ -1,10 +1,14 @@
 nav{
     position: fixed;
-    top: 2vmin;
-    left: 2vmin;
+    top: 1em;
+   right: 1em;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(2px);
+
 }
 .active{
-    color: rgb(153, 73, 73)
+    color: rgb(153, 73, 73);
 }
 
 .nav-ul{
@@ -12,21 +16,33 @@ nav{
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
-   width: 10vmin;
+   align-items: center;
+   width: 5em;
+   height: fit-content;
 //    align-items: center;
    padding: 0;
    margin: 0;
+   backdrop-filter: blur(2px);
+   border: 2px solid rgba(255,255,255, .5);
+   border-radius:  10px;
    li{
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
    }
 }
 
 .nav-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .nav-name{
         opacity: 0;
         max-width: 0;
         max-height: 0;
+        font-weight: bolder;
     }
     .nav-icon{
         opacity: 1;
@@ -53,14 +69,32 @@ nav{
  position: absolute;
  z-index: 1;
  display: flex;
-    justify-content: center;
-    align-items: center;
+align-self: center;
+justify-self: center;
+    
 }
 
 .nav-icon{
     transition: all .3s;
     position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-self: center;
+    justify-self: center;
+    width: 2em;
+    height: 2em;
+}
+
+.hamburger{
+    display: flex;
+    align-self: flex-end;
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+.ham-icon{
+    width: 2em;
+    height: 2em;
 }
