@@ -1,7 +1,7 @@
 nav{
     position: fixed;
     top: 1em;
-   right: 1em;
+    right: 2vmin;
     display: flex;
     flex-direction: column;
    
@@ -98,6 +98,6 @@ color: inherit;
     cursor: pointer;
 }
 .ham-icon{
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
 }

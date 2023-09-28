@@ -1,0 +1,25 @@
+.header{
+    position: absolute;
+    top: .5em;
+    left: 5vmin;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 3em;
+    will-change: filter;
+    transition: filter .5s;
+   position: fixed;
+
+  
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #ffffffaa);
+  }
+
+  .title{
+    padding-left: 1.3em;
+    margin: 0;
+    font-weight:900;
+  }

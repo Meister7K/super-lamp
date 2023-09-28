@@ -7,7 +7,7 @@ const  Projects = lazy(()=> import('./pages/projects/Projects'))
 const  About = lazy(()=> import('./pages/about/About')) 
 const Blog = lazy(()=> import('./pages/blog/Blog'))
 import { Loading } from './components/loading/Loading'
-
+import { Logo } from './components/logo/Logo'
 // import { useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -30,6 +30,7 @@ function App() {
   return (
     <>
     <Container fluid>
+      <Logo/>
       <Row>
         <Col xs >
         <Nav/>
