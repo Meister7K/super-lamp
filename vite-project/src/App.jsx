@@ -12,8 +12,13 @@ import { Logo } from './components/logo/Logo'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+// import { mobileTest } from './helpers/MobileCheck'
+import { setTheme, keepTheme } from './helpers/Theme'
+
 
 function App() {
+
+  keepTheme()
 
   //!mobile testing
   const devInfo = navigator.userAgent;
@@ -23,9 +28,12 @@ function App() {
   console.log(isMobileDev)
 
   // const [mobileState, setMobileState] = useState(false)
-  // if(isMobileDev){
-  //   setMobileState(true)
-  // }
+  if(isMobileDev){
+    document.documentElement.id = 'mobile'
+} else{
+    document.documentElement.id = 'desktop'
+}
+  // mobileTest()
 
   return (
     <>

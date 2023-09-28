@@ -11,11 +11,11 @@
     will-change: filter;
     transition: filter .5s;
    position: fixed;
-
+    color: inherit;
   
   }
   .logo:hover {
-    filter: drop-shadow(0 0 2em #ffffffaa);
+    filter: drop-shadow(0 0 2em var(--shadowColor));
   }
 
   .title{

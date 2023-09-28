@@ -1,16 +1,27 @@
 // Vars
-$MainTextColor: rgba(255,255,255, 0.9);
+
 
 .theme-dark{
-  $MainTextColor: rgba(255,255,255, 0.9);
-
+  --MainTextColor: rgba(255,255,255, 0.9);
+  --mainBackgroundColor: rgba(0,0,0, 0.7);
+  --borderColor: rgba(255,255,255, 0.9);
+  --shadowColor:rgba(255,255,255, 0.9);
 }
 
 .theme-light{
-  $MainTextColor: rgba(0,0,0, 0.9);
+  --MainTextColor: rgba(31, 31, 31, 0.9);
+  --mainBackgroundColor: rgba(255, 255, 255, 0.7);
+  --borderColor: rgba(36, 36, 36, 0.9);
+  --shadowColor:rgba(0,0,0, 0.9);
 }
 
+#mobile{
 
+}
+
+#desktop{
+
+}
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -26,13 +37,15 @@ $MainTextColor: rgba(255,255,255, 0.9);
   -webkit-text-size-adjust: 100%;
 
 color-scheme: light dark;
-  color: $MainTextColor;
-  background-color: #242424;
+  color: var(--MainTextColor);
+  background-color: var(--mainBackgroundColor);
+  border-color: var(--borderColor);
+  transition: color .5s ease-in-out;
 }
 
 a {
   font-weight: 500;
- color: inherit;
+   color: inherit;
   text-decoration: inherit;
 }
 // a:hover {
@@ -93,9 +106,6 @@ button:focus-visible {
   :root {
     color: #213547;
     background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
   }
   button {
     background-color: #f9f9f9;
