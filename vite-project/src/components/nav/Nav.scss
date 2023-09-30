@@ -4,6 +4,8 @@ nav{
     right: 2vmin;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
    
 }
 .active{
@@ -89,20 +91,42 @@ color: inherit;
 
 .hamburger{
     display: flex;
-    align-self: flex-end;
-    width: fit-content;
+    width: 5em;
+    align-items: center;
+    justify-content: center;
     height: fit-content;
     background-color: transparent;
     padding: 0;
     margin: 0.2em;
     z-index: 2;
     cursor: pointer;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
 }
 .ham-icon{
     width: 3em;
     height: 3em;
     &:hover{
-        color: var(--red)
-    }
+        color: var(--red);
+ }
+        // &:active{ .ham-t,.ham-m,.ham-b{
+        //      animation: float 1s 1;
+        // }
+           
+        // }
+   
     transition: color .5s;
+
+}
+.ham-t,.ham-m,.ham-b{
+    transition: all .5s;
+}
+
+@keyframes float{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(50deg);
+    }
 }
