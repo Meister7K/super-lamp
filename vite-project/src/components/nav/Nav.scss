@@ -7,7 +7,7 @@ nav{
    
 }
 .active{
-    color: rgb(153, 73, 73);
+    color: var(--red);
 }
 
 .nav-ul{
@@ -30,6 +30,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
    }
 }
 
@@ -100,4 +101,8 @@ color: inherit;
 .ham-icon{
     width: 3em;
     height: 3em;
+    &:hover{
+        color: var(--red)
+    }
+    transition: color .5s;
 }

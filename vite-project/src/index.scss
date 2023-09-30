@@ -1,5 +1,15 @@
-// Vars
-
+//!Fonts
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'),
+  url('./assets/fonts/Roboto-Black.ttf') format('woff');
+}
+@font-face {
+  font-family: 'Quick';
+  src: local('Quick'),
+  url('./assets/fonts/Quicksilver.ttf') format('woff');
+}
+//! Vars
 
 .theme-dark{
   --MainTextColor: rgba(255,255,255, 0.9);
@@ -9,10 +19,10 @@
 }
 
 .theme-light{
-  --MainTextColor: rgba(31, 31, 31, 0.9);
+  --MainTextColor: rgba(36, 36, 36, 0.9);
   --mainBackgroundColor: rgba(255, 255, 255, 0.7);
   --borderColor: rgba(36, 36, 36, 0.9);
-  --shadowColor:rgba(0,0,0, 0.9);
+  --shadowColor:rgba(36, 36, 36, 0.9);
 }
 
 #mobile{
@@ -24,7 +34,7 @@
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Quick, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -41,6 +51,8 @@ color-scheme: light dark;
   background-color: var(--mainBackgroundColor);
   border-color: var(--borderColor);
   transition: color .5s ease-in-out;
+  //colors:
+  --red: #C72415;
 }
 
 a {
