@@ -1,72 +1,76 @@
 .header{
-    position: absolute;
-    top: .5em;
-    left: 5vmin;
+    position: fixed;
+    top: .3em;
+    left: 2vmin;
     display: flex;
     align-items: center;
 }
 
 .logo {
-    height: 3em;
+    // position: fixed;
+    height: 6em;
+    width: 6em;
     will-change: filter;
     transition: filter .5s;
-   position: fixed;
     color: inherit;
-  
-  }
+    path{
+        transform: translateX(10%) translateY(25%);
+    }
+}
   .logo:hover {
     filter: drop-shadow(0 0 2em var(--shadowColor));
+     transition: transform .5s;
     #path1{
-        animation: p1 2s -0.3s infinite alternate ease-in-out;
+        animation: p1 3s  infinite alternate ease-in-out;
+       
     }
     #path2{
-        animation: p2 2s -0.9s infinite alternate ease-in-out;
+        animation: p2 3s -.75s infinite alternate ease-in-out;
     }
     #path3{
-        animation: p3 2s infinite alternate ease-in-out;
+        animation: p3 3s -1.25s infinite alternate ease-in-out;
     }
     #path4{
-        animation: p4 2s -0.6s infinite alternate ease-in-out;
+        animation: p4 3s -1.75s infinite alternate ease-in-out;
+        
     }
   }
 
-  .title{
-    padding-left: 1.3em;
-    margin: 0;
-    font-weight:900;
+  #path1,#path2,#path3,#path4{
+    transition: transform .5s;
   }
 
   @keyframes p4 {
     0%{
-        transform: translateX(20px) translateY(-10px);
+        transform: translateX(10% + 7.5%) translateY(25% - 5%);
     }
     100%{
-        transform: translateX(20px) translateY(10px);
+        transform: translateX(10% + 7.5%) translateY(25% + 5%);
     }
     }
 
 @keyframes p3 {
     0%{
-        transform: translateX(5px) translateY(-10px);
+        transform: translateX(10% + 2.5%) translateY(25% - 5%);
     }
     100%{
-        transform: translateX(5px) translateY(10px);
+        transform: translateX(10% + 2.5%) translateY(25% + 5%);
     }
     }
 @keyframes p2 {
     0%{
-        transform: translateX(-5px) translateY(-10px);
+        transform: translateX(10% - 2.5%) translateY(25% - 5%);
     }
     100%{
-        transform: translateX(-5px) translateY(10px);
+        transform: translateX(10% - 2.5%) translateY(25% + 5%);
     }
     }
 @keyframes p1 {
     0%{
-        transform: translateX(-20px) translateY(-10px);
+        transform: translateX(10% - 7.5%) translateY(25% - 5%);
     }
     100%{
-        transform: translateX(-20px) translateY(10px);
+        transform: translateX(10% - 7.5%) translateY(25% + 5%);
     }
     }
 

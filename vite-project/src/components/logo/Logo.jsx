@@ -6,31 +6,7 @@ import { setTheme } from "../../helpers/Theme";
 
 export const Logo = () => {
 
-    //! text flip
-    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*+=-<>?/";
-  const titleRef = useRef();
-
-  const textFlip = () => {
-    let loops = -1;
-    const textInterval = setInterval(() => {
-      if (titleRef.current) {
-        loops = loops + 1 / 3;
-        if (loops >= titleRef.current.innerText.length) {
-          clearInterval(textInterval);
-          return;
-        }
-
-        titleRef.current.innerText = titleRef.current.dataset.value
-          .split("")
-          .map((char, index) =>
-            index < loops
-              ? char
-              : chars[Math.floor(Math.random() * chars.length)]
-          )
-          .join("");
-      }
-    }, 30);
-  };
+   
 
   //! toggle theme
   const [theme, setLogo]= useState(localStorage.getItem("theme"))
@@ -48,10 +24,10 @@ const handleThemeToggle =()=>{
 //   }, []);
 
     return (
-        <div className='header' title="click the logo to change themes">
+        <div className='header' title="click to change theme">
             <svg
    className='logo'
-   viewBox="0 0 400 300"
+   viewBox="0 0 400 600"
    shapeRendering="geometricPrecision"
    textRendering="geometricPrecision"
    version="1.1"
@@ -81,15 +57,6 @@ const handleThemeToggle =()=>{
      stroke-width="0.5"
      id="path4" />
 </svg>
-
-            <h1
-        ref={titleRef}
-        className="title"
-        onMouseOver={textFlip}
-        data-value="arl Finkel"
-      >
-        arl Finkel
-      </h1>
     </div>
     )
 }

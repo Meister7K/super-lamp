@@ -1,1 +1,27 @@
+.no-select{
+    user-select: none;
+}
 
+.flipper {
+    animation: flipDown;
+    animation-delay: 1s;
+    animation-duration: 1s;
+
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes flipDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    80% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+
+}

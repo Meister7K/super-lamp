@@ -100,12 +100,13 @@ color: inherit;
     margin: 0.2em;
     z-index: 2;
     cursor: pointer;
-    backdrop-filter: blur(2px);
-    border-radius: 10px;
+    
 }
 .ham-icon{
     width: 3em;
     height: 3em;
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
     &:hover{
         color: var(--red);
  }
