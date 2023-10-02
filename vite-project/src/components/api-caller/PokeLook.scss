@@ -1,4 +1,46 @@
 .sprite{
     width:auto;
-    height: 20dvi;
+    height: 30vmin;
+}
+
+.stats{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    p{
+        margin: 1vmin;
+    }
+}
+
+.move-ul{
+    list-style: none;
+   width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    li{
+        padding: 2vmin;
+    }
+}
+
+.pokeName:hover{
+    transform: scale(1.01);
+    filter: drop-shadow(0 0 5px var(--shadowColor));
+    transition: all .3s;
+
+}
+
+.output-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    details{
+        width: fit-content;
+        display: flex;
+    }
 }
