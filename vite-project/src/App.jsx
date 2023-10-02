@@ -10,8 +10,6 @@ import { Loading } from './components/loading/Loading'
 import { Logo } from './components/logo/Logo'
 // import { useState } from 'react'
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 // import { mobileTest } from './helpers/MobileCheck'
 import { setTheme, keepTheme } from './helpers/Theme'
 
@@ -38,12 +36,8 @@ function App() {
   return (
     <>
     <Container fluid>
-      <Logo/>
-      <Row>
-        <Col xs >
-        <Nav/>
-      </Col>
-      <Col>
+      <Logo/>  
+        <Nav/>   
       <Suspense fallback={<Loading/>}>
         <Routes>
             <Route path='/' element={<Home/>}/>
@@ -55,10 +49,6 @@ function App() {
             <Route path='/blog' element={<Blog/>}/>
       </Routes>
       </Suspense>
-        
-      </Col>
-      </Row>
-      
     </Container>
       
      

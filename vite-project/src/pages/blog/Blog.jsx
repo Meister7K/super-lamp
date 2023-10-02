@@ -1,12 +1,19 @@
 import './Blog.scss'
-
+import { useState } from 'react'
+import { PokeLook } from '../../components/api-caller/PokeLook'
 
 
 function Blog(){
 
+   
+
     return(
         <>
-            <h1 className='blog'>Blog</h1>
+        <div className='blog-container'>
+          <PokeLook/>
+            
+        </div>
+            
         </>
     )
 }

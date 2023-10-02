@@ -1,0 +1,36 @@
+.loading{
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.dots{
+    display: flex;
+    flex-direction: row;
+    
+    .dot{
+        padding-left: 1vmin;
+        animation: .5s infinite alternate jump;
+    }
+}
+
+
+#dot2{
+    animation-delay:  .2s;
+}
+#dot3{
+    animation-delay: .4s;
+}
+
+@keyframes jump {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-30px);
+    }
+
+}
