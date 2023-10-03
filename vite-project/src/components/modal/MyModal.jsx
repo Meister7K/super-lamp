@@ -8,7 +8,7 @@ export const MyModal = (props) => {
 
 
     return (
-        <Modal closeButton
+        <Modal 
         id='modal'
         fullscreen={true}
         centered

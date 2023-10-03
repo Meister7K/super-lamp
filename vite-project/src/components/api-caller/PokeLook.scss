@@ -1,6 +1,10 @@
 .sprite{
     width:auto;
     height: 30vmin;
+    backdrop-filter: blur(5px) invert(10%);
+    border-radius: 10px;
+    border: 2px inset ;
+    margin: 0 1vmin;
 }
 
 .stats{
@@ -22,6 +26,9 @@
     align-items: start;
     justify-content: center;
     flex-direction: column;
+    backdrop-filter: blur(5px) invert(10%);
+    border-radius: 10px;
+    border: 2px inset ;
     li{
         padding: 2vmin;
     }
@@ -43,4 +50,45 @@
         width: fit-content;
         display: flex;
     }
+    summary{
+        cursor: pointer;
+    }
 }
+.search-form{
+    background-color: transparent;
+    select{
+        background: none;
+        background-color: transparent;
+        -webkit-appearance: none;
+        color: var(--mainTextColor);
+        padding: 1px 0px;
+        border-width: 2px;
+        border-style: inset;
+        backdrop-filter: blur(5px);
+        border-radius: 1vmin;
+        padding: 1vmin 2vmin;
+        margin: 1vmin;
+        font-family: Roboto, ;
+    }
+    input{
+        background-color: transparent;
+        backdrop-filter: blur(5px);
+        color: var(--mainTextColor);
+        border-radius: 1vmin;
+        padding: 1vmin 2vmin;
+        margin: 1vmin;
+        font-family: Roboto, ;
+    }
+    option{
+        background-color: transparent;
+        backdrop-filter: blur(5px);
+        color: var(--secondaryTextColor);
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+

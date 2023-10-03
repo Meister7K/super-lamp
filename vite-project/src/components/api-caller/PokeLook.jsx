@@ -1,8 +1,9 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Loading } from '../loading/Loading';
 import './PokeLook.scss';
 import { MyModal } from "../modal/MyModal";
 import { Row, Col, Container } from 'react-bootstrap'
+
 
 
 export const PokeLook = () => {
@@ -10,7 +11,7 @@ export const PokeLook = () => {
     const [input, setInput] = useState();
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(false)
-
+const [pokeArr, setPokeArr] = useState([]);
     const handleChange = (e) => {
         setInput(e.target.value);
         // setData(null)
@@ -43,7 +44,22 @@ export const PokeLook = () => {
         setShowModal(false);
     }
 
-    // useEffect(()=>{
+    const fetchPokeList = () => {
+        fetch(`https://pokeapi.co/api/v2/pokemon?limit=1017`)
+            .then(response => response.json())
+            .then((all) => {
+                const names = all.results.map((pokemon) => pokemon.name);
+                setPokeArr(names); // Update the state with the Pokémon names
+            })
+            .catch(error => {
+                console.error("Error fetching Pokémon list:", error);
+            });
+    }
+
+    useEffect(() => {
+        fetchPokeList();
+    }, []);
+
 
     console.log(data)
 
@@ -54,9 +70,8 @@ export const PokeLook = () => {
         for (let i = 0; i < data.moves.length; i++) {
             moveArr.push(data.moves[i])
         }
-        console.log(moveArr)
+        // console.log(moveArr)
     }
-    // })
 
     return (
         <>
@@ -65,9 +80,14 @@ export const PokeLook = () => {
                     <h1>Search a Pokemon</h1>
                     <MyModal textP="Data not found for this input" textS="Try using the name or #" show={showModal} onHide={closeModal} />
 
-                    <form>
+                    <form className="search-form">
                         <input type='text' id='inputText' placeholder="name or #" value={input} onChange={handleChange} />
-                        <p>Input: {input}</p>
+                        {pokeArr.length >= 0 ?(<div> <label>pokedex</label><select id='poke' onChange={handleChange} size='10'>
+                            {pokeArr.map((name, i)=>(
+                                <option key={i} value={name} >{name}</option>
+                            ))}
+                        </select></div>):''}
+                        {/* <p>Input: {input}</p> */}
                         <button id='lookupBtn' type="submit" onClick={handleLookup}>lookup</button>
 
                     </form>
@@ -81,8 +101,8 @@ export const PokeLook = () => {
                                 <h3 className="pokeName"><a href={`https://www.serebii.net/pokemon/${data.name}/`} target={'_blank'} rel="noreferrer" >{data.name}</a></h3>
 
 
-                                <img className="sprite" src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${JSON.stringify(data.id)}.png`} />
-                                <img className="sprite" src={data.sprites.front_shiny} />
+                                <img className="sprite" src={data.sprites.other["official-artwork"].front_default} />
+                                <img className="sprite" src={data.sprites.other["official-artwork"].front_shiny} />
 
 
                                 <h4>Type:  
@@ -153,7 +173,7 @@ export const PokeLook = () => {
                         {moveArr.length > 0 ? 
 
                             // <li>{moveArr.move[0]}</li>
-                            <details>
+                            <details >
                                 <summary>Moves</summary>
                                 <ul className="move-ul">
                                     {moveArr.sort((a,b)=> a.move.name.localeCompare( b.move.name)).map((move, i) => (

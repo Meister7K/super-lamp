@@ -16,6 +16,10 @@
     path{
         transform: translateX(10%) translateY(25%);
     }
+    &:active{
+        transform:rotateY(360deg);
+        transition: transform 1s;
+    }
 }
   .logo:hover {
     filter: drop-shadow(0 0 2em var(--shadowColor));
@@ -35,6 +39,8 @@
         
     }
   }
+
+  
 
   #path1,#path2,#path3,#path4{
     transition: transform .5s;
