@@ -1,5 +1,5 @@
 import './Projects.scss'
-import { Loading } from '../../components/loading/Loading'
+// import { Loading } from '../../components/loading/Loading'
 
 
 function Projects(){
