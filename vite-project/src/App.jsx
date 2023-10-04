@@ -12,6 +12,7 @@ import { Logo } from './components/logo/Logo'
 import Container from 'react-bootstrap/Container';
 // import { mobileTest } from './helpers/MobileCheck'
 import { setTheme, keepTheme } from './helpers/Theme'
+import { Footer } from './components/footer/Footer'
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
             <Route path='/blog' element={<Blog/>}/>
       </Routes>
       </Suspense>
+      {/* <Footer/> */}
     </Container>
       
      

@@ -13,7 +13,8 @@ export const PokeLook = () => {
     const [isLoading, setIsLoading] = useState(false)
 const [pokeArr, setPokeArr] = useState([]);
     const handleChange = (e) => {
-        setInput(e.target.value);
+        
+        setInput(e.target.value.toLowerCase());
         // setData(null)
     }
 
@@ -77,7 +78,7 @@ const [pokeArr, setPokeArr] = useState([]);
         <>
             <Container fluid>
                 <Row>
-                    <h1>Search a Pokemon</h1>
+                    <h1>The Pokedex</h1>
                     <MyModal textP="Data not found for this input" textS="Try using the name or #" show={showModal} onHide={closeModal} />
 
                     <form className="search-form">
@@ -142,6 +143,11 @@ const [pokeArr, setPokeArr] = useState([]);
                                         Speed : {JSON.stringify(data.stats[5].base_stat)}
                                     </p>
                                     </Col>
+                                    <Col>
+                                    <p> Total :
+                                        {data.stats[0].base_stat + data.stats[1].base_stat + data.stats[2].base_stat + data.stats[3].base_stat + data.stats[4].base_stat + data.stats[5].base_stat}
+                                    </p>
+                                    </Col>
 
 
                                     {/* <h2>{JSON.stringify(data)}</h2> */}
@@ -177,7 +183,7 @@ const [pokeArr, setPokeArr] = useState([]);
                                 <summary>Moves</summary>
                                 <ul className="move-ul">
                                     {moveArr.sort((a,b)=> a.move.name.localeCompare( b.move.name)).map((move, i) => (
-                                        <li key={i}>{move.move.name}: Level: {move.version_group_details[0].move_learn_method.name !== 'machine' ?  move.version_group_details[0].level_learned_at : 'TM'}</li>
+                                        <li key={i}>{move.move.name}:  {move.version_group_details[0].move_learn_method.name !== 'machine' ? `Level ${move.version_group_details[0].level_learned_at}` : 'TM'}</li>
                                     ))}
                                 </ul>
                             </details>
