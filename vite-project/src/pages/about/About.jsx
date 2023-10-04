@@ -6,6 +6,8 @@ import { useLocation } from 'react-router-dom';
 
 function About() {
 
+    const skillArr = []
+
     const imageRef = useRef();
 
     const [open, setOpen] = useState(false);
@@ -35,7 +37,7 @@ function About() {
                 <img src={Head} className='headshot' ref={imageRef} />
             </div>
                 <div className='resume'>
-                    
+                    {}
                 </div>
             </div>
             

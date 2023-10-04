@@ -32,7 +32,7 @@ export const Nav = () => {
     }
 
     return (
-        <nav>
+        <nav className='menu-nav'>
             <div className='hamburger' onClick={() => toggleMenu()}>
                <svg
   

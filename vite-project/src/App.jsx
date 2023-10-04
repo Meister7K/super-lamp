@@ -13,6 +13,7 @@ import Container from 'react-bootstrap/Container';
 // import { mobileTest } from './helpers/MobileCheck'
 import { setTheme, keepTheme } from './helpers/Theme'
 import { Footer } from './components/footer/Footer'
+import { Project } from './pages/projects/project/Project'
 
 
 function App() {
@@ -43,7 +44,10 @@ function App() {
         <Routes>
             <Route path='/' element={<Home/>}/>
          
-            <Route path='/projects' element={<Projects/>}/>
+            <Route path='/projects/*' element={<Projects/>}>
+                <Route path=':id' element={<Project/>}/>
+            </Route>
+            {/* <Route path='/projects/*' element={<Project/>}/> */}
          
             <Route path='/about' element={<About/>}/>
 
