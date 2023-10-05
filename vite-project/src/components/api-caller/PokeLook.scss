@@ -46,6 +46,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(5px) invert(10%);
+    border-radius: 10px;
+    // border: 2px inset ;
+    margin-top: .5em;
     details{
         width: fit-content;
         display: flex;

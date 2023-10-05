@@ -1,0 +1,17 @@
+.pro-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:10dvh;
+    // justify-content: space-evenly;
+    // height: 90dvh;
+    .pro-img{
+        position: fixed;
+        z-index: -1;
+        opacity: .5;
+        width: auto;
+        height: 90dvh;
+        top: 10dvh;
+    }
+
+}

@@ -39,8 +39,9 @@ function Projects(){
            
             
             <div className='project-container'> 
-            <h1>Projects</h1>
+                
                 <nav className='project-nav'>
+                    <h1>Projects</h1>
                 <ul>
                     {projects.map(({name, id})=>(
                         <li key={id}>
@@ -53,7 +54,6 @@ function Projects(){
             <Suspense fallback={<Loading/>}>
                 <Outlet/>
             </Suspense>
-                
 
             </div>
            

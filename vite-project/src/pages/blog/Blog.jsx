@@ -1,6 +1,6 @@
 import './Blog.scss'
-import { useState } from 'react'
-import { PokeLook } from '../../components/api-caller/PokeLook'
+// import { useState } from 'react'
+// import { PokeLook } from '../../components/api-caller/PokeLook'
 
 
 function Blog(){
@@ -10,8 +10,8 @@ function Blog(){
     return(
         <>
         <div className='blog-container'>
-          <PokeLook/>
-            
+          {/* <PokeLook/> */}
+            <p>blog</p>
         </div>
             
         </>
