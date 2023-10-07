@@ -48,7 +48,7 @@
     justify-content: center;
     backdrop-filter: blur(5px) invert(10%);
     border-radius: 10px;
-    // border: 2px inset ;
+    padding: .5em .5em 2em .5em;
     margin-top: .5em;
     details{
         width: fit-content;
@@ -56,6 +56,9 @@
     }
     summary{
         cursor: pointer;
+    }
+    h3{
+        margin: .1em;
     }
 }
 .search-form{
