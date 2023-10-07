@@ -72,7 +72,11 @@ const [pokeArr, setPokeArr] = useState([]);
             moveArr.push(data.moves[i])
         }
         // console.log(moveArr)
+        const str = data.name;
+        const pName = str.replace(/[^a-zA-Z0-9 ]/g, '');
     }
+
+    
 
     return (
         <>
@@ -99,7 +103,7 @@ const [pokeArr, setPokeArr] = useState([]);
                         {data ?
                             <div>
                                 <h3>#{data.id}</h3>
-                                <h3 className="pokeName"><a href={`https://www.serebii.net/pokemon/${data.name}/`} target={'_blank'} rel="noreferrer" >{data.name}</a></h3>
+                                <h3 className="pokeName"><a href={`https://www.serebii.net/pokemon/${data.name.replace(/[^a-zA-Z0-9 ]/g, '')}/`} target={'_blank'} rel="noreferrer" >{data.name}</a></h3>
 
 
                                 <img className="sprite" src={data.sprites.other["official-artwork"].front_default} />

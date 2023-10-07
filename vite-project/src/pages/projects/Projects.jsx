@@ -18,27 +18,10 @@ function Projects(){
 
     const location = useLocation();
 
-//     const projectArr =[
-//         {
-//         'name':'TaskMasterFlex',
-//         'route':'/projects/taskmasterflex',
-//         'element':'TaskmasterFlex'
-// },
-// {
-//     'name':'1',
-//     'route':'1',
-//     'img':'',
-//     'desc':'',
-//     'link':'',
-//     'repo':''
-// }, 
-// ]
 
     return(
         <>
-           
-            
-            <div className='project-container'> 
+            <div className='project-page'> 
                 
                 <nav className='project-nav'>
                     <h1>Projects</h1>
@@ -51,13 +34,12 @@ function Projects(){
                     ))}
                 </ul>
             </nav>
+            <div className='pro-output'>
             <Suspense fallback={<Loading/>}>
                 <Outlet/>
             </Suspense>
-
             </div>
-           
-           
+            </div>
         </>
     )
 }

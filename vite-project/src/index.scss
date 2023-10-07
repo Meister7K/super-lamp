@@ -39,13 +39,7 @@ h4{
   margin: 0;
 }
 
-#mobile{
 
-}
-
-#desktop{
-
-}
 
 :root {
   font-family: Quick, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -59,7 +53,7 @@ h4{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
+padding: 0;
 color-scheme: light dark;
   color: var(--MainTextColor);
   background-color: var(--mainBackgroundColor);
@@ -67,6 +61,10 @@ color-scheme: light dark;
   transition: color .5s ease-in-out;
   //colors:
   --red: #C72415;
+
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 a {
@@ -81,9 +79,12 @@ a {
 body {
   margin: 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  // width: 100dvw;
 }
 
 h1 {
@@ -130,6 +131,20 @@ button:focus-visible {
   pointer-events: none;
   user-select: none;
   transition: all .5s;
+}
+
+
+#mobile{
+.pro-output{
+  flex-direction: column;
+  img{
+    max-width: 90dvw;
+  }
+}
+}
+
+#desktop{
+
 }
 
 @media (prefers-color-scheme: light) {
