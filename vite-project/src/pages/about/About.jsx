@@ -46,7 +46,10 @@ function About() {
     return (
         <>
             <div className='about-container'>
-                <h1 className='about-title'>A Wild Developer Appeared</h1>
+                <div className='mask'>
+                   <h1 className='about-title port'>A Wild Developer Appeared</h1> 
+                </div>
+                
 
                 <p className='about-info'>I'm <span>Karl Finkel</span></p>
                 <p className='about-info'>A former Project Coordinator with a newfound passion for web and application development. </p>
@@ -54,12 +57,12 @@ function About() {
                     <img src={Head} className='headshot' ref={imageRef} />
                 </div>
 
-            </div>
+            
             <div className='github-data'>
                 <h2>Github History</h2>
                 <div className='history'>
                    {data ?
-                   <> {data.filter(data=>data.actor.id).map((data) => (<><Github key={data.id} {...data} />
+                   <> {data.map((data) => (<><Github key={data.id} {...data} />
                    {/* <Github key={data.id} {...data} /> */}
                    
                    </>))}</>
@@ -72,6 +75,7 @@ function About() {
             </div>
             <div className='resume'>
                 { }
+            </div>
             </div>
         </>
     )

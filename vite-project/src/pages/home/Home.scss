@@ -2,6 +2,10 @@
     user-select: none;
 }
 
+.title{
+    font-size: 7em;
+}
+
 .flipper {
     animation: flipDown;
     animation-delay: 1s;
@@ -11,6 +15,8 @@
     animation-direction: alternate;
 
 }
+
+
 @keyframes flipDown {
     0% {
         transform: translateY(0);

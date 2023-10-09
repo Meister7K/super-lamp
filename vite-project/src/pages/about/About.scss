@@ -1,14 +1,20 @@
 
 
 .about-container{
+    width: 90dvw;
+    height: auto;
     z-index: 10;
     position: relative;
     top: 1vmin;
     // backdrop-filter: opacity(0);
     display: flex;
     flex-direction: column;
-    p{
-        z-index: 1;
+    margin-top: 3em;
+    margin-inline: 1em;
+    // max-width: 99dvw;
+    .about-info{
+        // z-index: 1;
+       margin: .2em;
     }
 }
 
@@ -42,6 +48,8 @@
 
 .about-title{
     font-size: 7em;
+    width: fit-content;
+    margin: 0 auto;
     //  mix-blend-mode: difference;
     // background-clip: text;
     // -webkit-background-clip: text;
@@ -50,8 +58,14 @@
 .github-data{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    margin-inline: 1em;
+    // margin-inline: 1em;
+    width: 100%;
+    h2{
+        margin: 0 auto;
+    }
     
     .history{
         display: flex;
@@ -65,7 +79,12 @@
        }
     }
     .calendar{
+        width: 90%;
         // padding: 1em;
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        background-color: var(--mainBackgroundColor);
+        padding: .5em;
     }
 }
 

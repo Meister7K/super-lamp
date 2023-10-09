@@ -15,7 +15,7 @@ export const Project = () => {
         <>
             <div className='pro-data'>
                 <h2>{project.name}</h2>
-                <h4>{project.desc}</h4>
+                <p>{project.desc}</p>
                 {project.goal ?<p> <span>Goal:</span> {project.goal}</p>:''}
                 {project.link ? <a target='_blank' href={project.link} rel="noreferrer"><button>Link </button></a> : ''}
 

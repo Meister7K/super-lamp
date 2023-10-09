@@ -82,7 +82,7 @@ const [pokeArr, setPokeArr] = useState([]);
         <>
             <Container fluid>
                 <Row>
-                    <h1>The Pokedex</h1>
+                    <h1>Pokedex</h1>
                     <MyModal textP="Data not found for this input" textS="Try using the name or #" show={showModal} onHide={closeModal} />
 
                     <form className="search-form">

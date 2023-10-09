@@ -19,7 +19,7 @@ const projects = [
     {
         name: 'Pokedex',
         id: 'pokedex',
-        desc: 'A web app for searching for pokemon and stats',
+        desc: 'A web app bult for looking up pokemon and stats',
         img: '',
         link: '',
         repo: '',
@@ -28,7 +28,7 @@ const projects = [
     {
         name: 'R3F Solar System',
         id: 'r3f',
-        desc: 'an application built to showcase our solr system along with practicing 3D programming',
+        desc: 'an application built to showcase our solar system along with practicing 3D programming',
         img: Sol,
         link: 'https://meister7k.github.io/ThreeJSTSPractice/',
         repo: 'https://github.com/Meister7K/ThreeJSTSPractice',

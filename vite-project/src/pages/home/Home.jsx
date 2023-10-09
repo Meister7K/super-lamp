@@ -35,7 +35,7 @@ function Home() {
     return (
         <>
             <div className='mask'>
-                <h1 ref={titleRef} className='title' onMouseOver={textFlip} data-value={"Karl Finkel"}>Karl Finkel</h1>
+                <h1 ref={titleRef} className='title port' onMouseOver={textFlip} data-value={"Karl Finkel"}>Karl Finkel</h1>
             </div>
             <div className="mask">
                 <h3 className="port2 flipper no-point">
