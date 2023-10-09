@@ -37,7 +37,7 @@ function App() {
 
   return (
     <>
-    <Container fluid>
+    <Container fluid className='main-container'>
       <Logo/>  
         <Nav/>   
       <Suspense fallback={<Loading/>}>

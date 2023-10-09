@@ -13,6 +13,7 @@
 }
 
 .headshot{
+    opacity: 0.8;
     width:auto ;
     height: 100%;
     position: fixed;
@@ -24,24 +25,62 @@
     transition: all 1s ease-in-out;
     &:hover{
         filter: blur(0);
+        opacity: 1;
+        &:active{
+            z-index: 100;
+            
+        }
     }
+
 }
 
-.about-title, .about-info{
-    z-index: 1;
-   
-    filter:  drop-shadow(0 0 2px var(--shadowColor));
+.about-title, .about-info, .github-data{
+    position: relative;
+    z-index: 10;
+    // filter:  drop-shadow(0 0 2px var(--shadowColor));
 }
 
 .about-title{
     font-size: 7em;
-     mix-blend-mode: difference;
-    background-clip: text;
-    -webkit-background-clip: text;
+    //  mix-blend-mode: difference;
+    // background-clip: text;
+    // -webkit-background-clip: text;
+}
+
+.github-data{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-inline: 1em;
+    
+    .history{
+        display: flex;
+        flex-direction: row;
+        white-space: nowrap;
+        // overflow: hidden;
+       width: fit-content;
+       animation: 20s slide infinite linear;
+       &:hover{
+        animation-play-state: paused;
+       }
+    }
+    .calendar{
+        // padding: 1em;
+    }
 }
 
 @media (max-width: 500px) {
     .about-title{
         font-size: 3.5em;
     }
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(100dvw); //!check later
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
 }

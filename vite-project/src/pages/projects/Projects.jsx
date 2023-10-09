@@ -27,10 +27,13 @@ function Projects(){
                     <h1>Projects</h1>
                 <ul>
                     {projects.map(({name, id})=>(
-                        <li key={id}>
-                            <NavLink to={id} className={` ${active === id ? 'active' : ''}`}>{name}</NavLink> 
+                        <>
+                        <NavLink to={id} className={` ${active === id ? 'active' : ''}`}><li key={id}>
+                            {name}
                         
                         </li>
+                        </NavLink>
+                        </>
                     ))}
                 </ul>
             </nav>
