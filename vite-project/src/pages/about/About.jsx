@@ -52,7 +52,8 @@ function About() {
                 
 
                 <p className='about-info'>I'm <span>Karl Finkel</span></p>
-                <p className='about-info'>A former Project Coordinator with a newfound passion for web and application development. </p>
+                <p className='about-info'>A former Project Coordinator with a newfound passion for web and application development. Currently based in Denver, CO. Originally from the Great North(MN). </p>
+                <br/>
                 <div className='mask'>
                     <img src={Head} className='headshot' ref={imageRef} />
                 </div>
