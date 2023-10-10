@@ -1,6 +1,7 @@
 import './Home.scss'
 import { useRef } from 'react';
 import { TextFlipper } from '../../components/textFlipper/TextFlipper';
+import {NavLink} from 'react-router-dom'
 
 function Home() {
 
@@ -42,6 +43,10 @@ function Home() {
                     <TextFlipper textArr={titleArray} />
                 </h3>
             </div>
+            <br/>
+            <NavLink to='/projects'>
+                <button>continue</button>
+            </NavLink>
 
         </>
     )

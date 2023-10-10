@@ -75,6 +75,7 @@ function About() {
                 <img className='calendar' src={`https://ghchart.rshah.org/${hextColor}/Meister7K`} />
             </div>
             <div className='resume'>
+                <h2>Resume</h2>
                 { }
             </div>
             </div>

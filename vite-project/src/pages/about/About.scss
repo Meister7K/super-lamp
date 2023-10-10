@@ -16,7 +16,7 @@
     // max-width: 99dvw;
     .about-info{
         // z-index: 1;
-       margin: .2em;
+       margin: 1em 0;
     }
 }
 
@@ -42,7 +42,7 @@
 
 }
 
-.about-title, .about-info, .github-data{
+.about-title, .about-info, .github-data, .resume{
     position: relative;
     z-index: 10;
     // filter:  drop-shadow(0 0 2px var(--shadowColor));
@@ -103,7 +103,7 @@
 
 @keyframes slide {
     from{
-        transform: translateX(100dvw); //!check later
+        transform: translateX(100%); //!check later
     }
     to{
         transform: translateX(-100%);
