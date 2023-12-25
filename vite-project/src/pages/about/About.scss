@@ -74,6 +74,10 @@
     }
     
     .history{
+        width: 100%;
+    }
+    .slider{
+        position: relative;
         display: flex;
         flex-direction: row;
         white-space: nowrap;
@@ -83,6 +87,25 @@
        &:hover{
         animation-play-state: paused;
        }
+    }
+    .event-slide{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: .5em;
+        width: fit-content;
+        height: auto;
+        
+        backdrop-filter: blur(5px);
+        background-color: rgba(255,255,255, 0.3);
+        border-radius: 10px;
+        padding: .5em;
+        white-space: wrap;
+        p{
+           font-size: 1em;
+            margin: 0;
+        }
     }
     .calendar{
         width: 95%;

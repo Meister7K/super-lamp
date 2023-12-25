@@ -62,13 +62,14 @@ function About() {
             <div className='github-data'>
                 <h2>Github History</h2>
                 <div className='history'>
-                   {data ?
+                    <div className='slider'>
+                     {data ?
                    <> {data.map((data) => (<><Github key={data.id} {...data} />
                    {/* <Github key={data.id} {...data} /> */}
                    
                    </>))}</>
-                    : <Loading />} 
-                    
+                    : <Loading />}    
+                    </div>
                 </div>
                 
                 <h2>Annual Commit Calendar</h2>
