@@ -9,7 +9,7 @@ function Blog(){
 
     return(
         <>
-        <div className='blog-container'>
+        <div className='blog-container page'>
           {/* <PokeLook/> */}
             <p>blog</p>
         </div>

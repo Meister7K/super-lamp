@@ -21,7 +21,7 @@ function Projects(){
 
     return(
         <>
-            <div className='project-page'> 
+            <div className='project-container page'> 
                 
                 <nav className='project-nav'>
                     <h1>Projects</h1>

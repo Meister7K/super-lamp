@@ -82,7 +82,6 @@ const [pokeArr, setPokeArr] = useState([]);
         <>
             <Container fluid>
                 <Row>
-                    <h1>Pokedex</h1>
                     <MyModal textP="Data not found for this input" textS="Try using the name or #" show={showModal} onHide={closeModal} />
 
                     <form className="search-form">
@@ -110,11 +109,22 @@ const [pokeArr, setPokeArr] = useState([]);
                                 <img className="sprite" src={data.sprites.other["official-artwork"].front_shiny} />
 
 
-                                <h4>Type:  
+                                <h3>Type:  
                                     <img src={`https://www.serebii.net/pokedex-bw/type/${data.types[0].type.name}.gif`}/>
                                     
                                     
-                                    {data.types[1] ?  <img src={`https://www.serebii.net/pokedex-bw/type/${data.types[1].type.name}.gif`}/> : ''}</h4>
+                                    {data.types[1] ?  <img src={`https://www.serebii.net/pokedex-bw/type/${data.types[1].type.name}.gif`}/> : ''}</h3>
+
+                                    {data.abilities.length > 1 ? <>
+                                    <h3>Abilities</h3>
+                                    <p>{data.abilities[0].ability.name}/{data.abilities[1].ability.name}</p>
+                                    </> : '' }
+                                    
+                                    {data.abilities.length < 2 ? <>
+                                    <h3>Abilities</h3>
+                                    <p>{data.abilities[0].ability.name}</p>
+                                    </> : '' }
+
                                 <h3>Base Stats</h3>
                                 <Row className="stats">
 

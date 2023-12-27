@@ -1,9 +1,11 @@
 .no-select{
     user-select: none;
 }
-
-.title{
-    
+.home-img{
+    width: 100px;
+    height: 100px;
+    z-index: -1;
+    animation: animate-image 5s  0s infinite alternate ease-in-out;
 }
 
 .flipper {
@@ -15,7 +17,12 @@
     animation-direction: alternate;
 
 }
-
+.home-btns{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    
+}
 
 @keyframes flipDown {
     0% {

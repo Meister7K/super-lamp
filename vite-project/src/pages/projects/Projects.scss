@@ -1,11 +1,4 @@
-.project-page{
-    width: 95dvw;
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .project-nav{
     display: flex;
@@ -13,7 +6,6 @@
     justify-content: space-evenly;
     align-items: center;
     width: 90%;
-    padding-top: 4em;
     z-index: 1;
     border-radius: 10px;
     margin: 0;
@@ -66,7 +58,7 @@
  
 }
 
-@media (max-width: 500px) {
+@media (max-width: 720px) {
     .project-nav{
         // color:blue;
         // background-color: blue;
@@ -74,6 +66,9 @@
     }
     .pro-data{
         // margin-top: 11em;
+    }
+    .pro-output{
+        flex-direction: column;
     }
     
 }

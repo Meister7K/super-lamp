@@ -9,8 +9,12 @@
 
 .logo {
     // position: fixed;
-    height: 6em;
-    width: 6em;
+    height: 10dvi;
+    width: 10dvi;
+    max-width: 120px;
+    max-height: 120px;
+    min-width: 70px;
+    min-height: 70px;
     will-change: filter;
     transition: filter .5s;
     color: inherit;

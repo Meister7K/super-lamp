@@ -1,0 +1,64 @@
+#resume {
+    padding-top:3em;
+   h2 {
+     display: flex;
+     justify-content: center;
+    
+   }
+ }
+ 
+ .icon {
+   width: 9dvw;
+   display: inline-block;
+   max-width: 100px;
+   filter: drop-shadow(0 0 5px (rgba(0, 0, 0, 0.5)));
+ }
+ 
+ .job-item,
+ .edu-item {
+   flex-wrap: wrap;
+   list-style: none;
+   margin: 2dvw;
+ }
+ 
+ .li-top,
+ .li-bot {
+   display: flex;
+   justify-content: space-between;
+ }
+ 
+ .job-item .job-description {
+   text-align: left;
+ }
+ 
+ .li-top{
+   display:block;
+ }
+ 
+ .detail-list {
+   padding-top: 1em;
+   padding-left: 1em;
+   list-style-type: circle;
+   text-align: left;
+ }
+ 
+ .education-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   .cert {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+   a {
+     color: inherit;
+     font-style: italic;
+     transition: all 0.3s ease;
+ 
+     &:hover {
+       filter: drop-shadow(0 0 3px white);
+     }
+   }
+ }

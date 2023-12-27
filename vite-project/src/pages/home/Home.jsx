@@ -3,6 +3,8 @@ import { useRef } from 'react';
 import { TextFlipper } from '../../components/textFlipper/TextFlipper';
 import {NavLink} from 'react-router-dom'
 
+
+
 function Home() {
 
     const titleArray = ["Web Developer", "Problem Solver", "Sports Junkie", "Visual Creative", "software Engineer", "Project Coordinator"]
@@ -34,7 +36,8 @@ function Home() {
     };
 
     return (
-        <>
+        <div className='page'>
+            
             <div className='mask'>
                 <h1 ref={titleRef} className='title port' onMouseOver={textFlip} data-value={"Karl Finkel"}>Karl Finkel</h1>
             </div>
@@ -43,12 +46,16 @@ function Home() {
                     <TextFlipper textArr={titleArray} />
                 </h3>
             </div>
-            <br/>
-            <NavLink to='/projects'>
-                <button>continue</button>
-            </NavLink>
-
-        </>
+            <div className='home-btns'>
+                <NavLink to='/projects'>
+                    <button>My Work</button>
+                </NavLink>
+                
+                <NavLink to='/about'>
+                    <button>My Info</button>
+                </NavLink> 
+            </div>
+        </div>
     )
 }
 export default Home
