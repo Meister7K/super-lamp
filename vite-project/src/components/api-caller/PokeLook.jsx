@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect} from "react";
 import { Loading } from "../loading/Loading";
 import "./PokeLook.scss";
 import { MyModal } from "../modal/MyModal";
@@ -12,7 +12,7 @@ export const PokeLook = () => {
   // const [id, setId] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [pokeArr, setPokeArr] = useState([]);
-  const detailRef = useRef(null);
+  
 
   const handleChange = (e) => {
     setInput(e.target.value.toLowerCase());
@@ -97,8 +97,8 @@ export const PokeLook = () => {
       moveArr.push(data.moves[i]);
     }
     // console.log(moveArr)
-    const str = data.name;
-    const pName = str.replace(/[^a-zA-Z0-9 ]/g, "");
+    // const str = data.name;
+    // const pName = str.replace(/[^a-zA-Z0-9 ]/g, "");
   }
 
   return (

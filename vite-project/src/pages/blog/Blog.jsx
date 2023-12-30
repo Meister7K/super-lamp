@@ -1,6 +1,6 @@
 import "./Blog.scss";
 import { useState, useEffect } from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 // import { PokeLook } from '../../components/api-caller/PokeLook'
 
 
