@@ -63,15 +63,33 @@
     
     .history{
         width: 100%;
+        display: flex;
+        flex-direction: row;
+         &:hover{
+            .slider1, .slider2{
+                animation-play-state: paused;
+            }
+       }
     }
-    .slider{
+    .slider1{
         position: relative;
         display: flex;
         flex-direction: row;
         white-space: nowrap;
         // overflow: hidden;
        width: fit-content;
-       animation: 20s slide infinite linear;
+        animation: 10s slide infinite linear;
+      
+    }
+    .slider2{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        white-space: nowrap;
+        // overflow: hidden;
+       width: fit-content;
+        animation: 10s slide infinite linear;
+  
        &:hover{
         animation-play-state: paused;
        }
@@ -114,10 +132,11 @@
 
 @keyframes slide {
     from{
-        transform: translateX(100%); //!check later
+        transform: translateX(0%); //!check later
     }
     to{
         transform: translateX(-100%);
     }
     
 }
+
