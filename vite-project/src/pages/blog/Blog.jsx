@@ -110,7 +110,7 @@ function Blog() {
               pokeData ? `${pokeData.sprites.other.showdown.front_default}` : ""
             }
           />
-          <p>{speciesData && speciesData.flavor_text_entries[0]  ? `${speciesData.flavor_text_entries[0].flavor_text}` :''}</p>
+          <p>{speciesData && speciesData.flavor_text_entries[0] ? `${speciesData.flavor_text_entries[0].flavor_text}` :''}</p>
 
           <div>{pokeData ? <Row className="stats">
             <Col>

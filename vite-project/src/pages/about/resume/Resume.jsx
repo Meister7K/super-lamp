@@ -4,7 +4,7 @@ import SkillList from "../skills/SkillList";
 import resume from "../../../assets/files/resume.pdf";
 import BootCert from "../../../assets/files/UTA.pdf";
 import CAPM from "../../../assets/files/CAPM.pdf";
-import { useRef, useState, useEffect } from "react";
+// import { useRef, useState, useEffect } from "react";
 
 function Resume() {
   const iconArray = [
@@ -676,7 +676,7 @@ function Resume() {
       <div className="work-history-container">
         
         <h2>Work History</h2>
-        <ul className="history-list>">
+        <ul className="history-list">
           {workArray.map((job, index) => (
             <>
               <li className="job-item" key={index}>

@@ -12,6 +12,7 @@ export const PokeLook = () => {
   // const [id, setId] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [pokeArr, setPokeArr] = useState([]);
+  const[specData, setSpecData]=useState(null);
   
 
   const handleChange = (e) => {
@@ -30,7 +31,8 @@ export const PokeLook = () => {
         // Check if the element is found before appending
         if (moveElement.childElementCount < 1) {
           const node = document.createElement("div");
-          node.innerText = `Accuracy: ${dataZ.accuracy} | Power: ${dataZ.power} | Type: ${dataZ.damage_class.name}/${dataZ.type.name} | PP:${dataZ.pp} \n ${dataZ.flavor_text_entries[0].flavor_text}`;
+          node.classList.add('move-detail');
+          node.innerText = `Power: ${dataZ.power} | Accuracy: ${dataZ.accuracy} \nType: ${dataZ.type.name} / ${dataZ.damage_class.name}| PP:${dataZ.pp} \n ${dataZ.flavor_text_entries[0].flavor_text}`;
 
           // Append the new div to the selected element
           moveElement.appendChild(node);
@@ -56,7 +58,8 @@ export const PokeLook = () => {
     xhr.onload = () => {
       if (xhr.status === 200) {
         setData(JSON.parse(xhr.responseText));
-
+        console.log(data);
+        getSpeData(JSON.parse(xhr.responseText).id);
         setIsLoading(false);
       } else {
         setShowModal(true); // Show the modal on API failure
@@ -65,6 +68,16 @@ export const PokeLook = () => {
       }
     };
     xhr.send();
+  };
+
+  const getSpeData =(id)=>{
+    fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
+    .then((res)=>res.json())
+    .then((res)=>{
+      
+      setSpecData(res);
+      console.log(specData);
+    })
   };
 
   const closeModal = () => {
@@ -87,7 +100,7 @@ export const PokeLook = () => {
     fetchPokeList();
   }, []);
 
-  console.log(data);
+  
 
   let moveArr = [];
 
@@ -188,11 +201,17 @@ export const PokeLook = () => {
                     ""
                   )}
                 </h3>
+                {specData ? <div>
+                  <h3>Description</h3>
+                  <p>{specData.flavor_text_entries &&
+      specData.flavor_text_entries[0] &&
+      specData.flavor_text_entries[0].flavor_text ? `${specData.flavor_text_entries[0].flavor_text}` : ''}</p>
+                </div>:''}
 
                 {data.abilities.length > 1 ? (
                   <>
                     <h3>Abilities</h3>
-                    <p>
+                    <p >
                       {data.abilities[0].ability.name}/
                       {data.abilities[1].ability.name}
                     </p>
@@ -204,7 +223,7 @@ export const PokeLook = () => {
                 {data.abilities.length < 2 ? (
                   <>
                     <h3>Abilities</h3>
-                    <p>{data.abilities[0].ability.name}</p>
+                    <p >{data.abilities[0].ability.name}</p>
                   </>
                 ) : (
                   ""
